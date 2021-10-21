@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Крестики-нолики</title>
+    <style>
+        body {
+            background-color: #f2f7de;
+            color: #000;
+        }
+        
+        .field {
+            width: 600px;
+            height: 600px;
+            margin: 50px auto;
+            outline: 2px solid #f2f7de;
+        }
+        
+        .field>div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            font-size: 120px;
+            font-family: 'Indie Flower', cursive;
+            color: black;
+            text-align: center;
+            outline: 2px solid black;
+            cursor: pointer;
+        }
+        
+        .win {
+            height: 100%;
+            line-height: 100vh;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 120px;
+            text-align: center;
+            font-family: 'Indie Flower', cursive;
+            background-color: rgba(242, 247, 222, 0.8);
+            cursor: default;
+        }
+        
+        .win>.mode0,
+        .win>.mode1,
+        .win>.mode2 {
+            transition: 1s;
+            position: absolute;
+            top: 65vh;
+            width: 10vw;
+            height: 3vw;
+            line-height: 1.7vw;
+            font-size: 2vw;
+            font-family: 'Indie Flower', cursive;
+            color: black;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+        
+        .win>.mode0:hover,
+        .win>.mode1:hover,
+        .win>.mode2:hover {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            transition: 1s;
+            font-size: 2.2vw;
+        }
+        
+        .win>.mode0 {
+            left: 25vw;
+        }
+        
+        .win>.mode1 {
+            left: 45vw;
+        }
+        
+        .win>.mode2 {
+            line-height: 3vw;
+            right: 25vw;
+        }
+    </style>
+    <script src="TicTacToeModule.js"></script>
+</head>
+
+<body onload='TicTacToe.load();'>
+</body>
+
+</html>
